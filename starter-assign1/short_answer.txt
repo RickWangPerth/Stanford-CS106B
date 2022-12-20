@@ -1,0 +1,125 @@
+Before submitting this file, make sure that there are no more TODO
+placeholders remaining in the file (and remove this comment too).
+
+Perfect Numbers
+---------------
+
+Before submitting this file, make sure that there are no more TODO
+placeholders remaining in the file (and remove this comment too).
+
+Q1. Roughly how long did it take your computer to do the search? How many perfect numbers were found and what were they?
+A1. TODO
+
+Found perfect number: 6
+Found perfect number: 28
+Found perfect number: 496
+Found perfect number: 8128
+
+Time taken by function: 1349050 microseconds
+
+
+Q2. Make a table of the timing results for `findPerfects` that you observed. (old-school table of text rows and columns is just fine)
+A2. TODO
+
++--------+-----------+
+|  size  | time(sec) |
++--------+-----------+
+| 10,000 |   0.099   |
++--------+-----------+
+| 20,000 |   0.351   |
++--------+-----------+
+| 40,000 |   1.354   |
++--------+-----------+
+| 80,000 |   5.344   |
++--------+-----------+
+| 160,000|  21.276   |
++--------+-----------+
+| 320,000|  85.414   |
++--------+-----------+
+
+Q3. Does it take the same amount of work to compute `isPerfect` on the number 10 as it does on the number 1000? Why or why not? Does it take the same amount of work for `findPerfects` to search the range of numbers from 1-1000 as it does to search the numbers from 1000-2000? Why or why not?
+A3. TODO
+No. 1000 (Time taken by function: 21636 microseconds) takes more recursion than 10 (Time taken by function: 13809 microseconds)
+
+Yes. Both of them take 1000 recursion.
+
+
+Q4. Extrapolate from the data you gathered and make a prediction: how long will it take `findPerfects` to reach the fifth perfect number?
+A4. TODO
+
+33M/32/2 ~= 50 times
+
+85*4*50 ~= 17000 sec
+
+Q5. Do any of the tests still pass even with this broken function? Why or why not?
+A5. TODO
+
+Correct (PROVIDED_TEST, perfect.cpp:104) Confirm 12 and 98765 are not perfect
+
+This test tests the specific number, which is not perfect, 12 and 98766 still not perfect. 
+
+Correct (PROVIDED_TEST, perfect.cpp:118) Time trial of findPerfects on input size 1000
+    Line 119 TIME_OPERATION findPerfects(1000) (size =     1000) completed in    0.038 secs
+
+This test is testing the time trial, which is not affected by the number changed.
+
+Q6. Explain your testing strategy for `smarterSum` and how you chose your specific test cases that lead you to be confident the function is working correctly.
+A6. TODO
+
+Test Negative numbers to avoid mathematical problems.
+Test the previously tested numbers to make sure the outcome is the same as the previous function
+Test the perfect numbers to make sure the function works correctly.
+
+Q7. Record your timing results for `findPerfectsSmarter` into a table.
+A7. TODO
+
++--------+-----------+
+|  size  | time(sec) |
++--------+-----------+
+| 40,000 |   0.044   |
++--------+-----------+
+| 80,000 |   0.078   |
++--------+-----------+
+| 160,000|   0.172   |
++--------+-----------+
+| 320,000|   0.421   |
++--------+-----------+
+
+Q8. Make a prediction: how long will `findPerfectsSmarter` take to reach the fifth perfect number?
+A8. TODO
+
+0.421 * 50 * 2 ~= 42 sec
+
+Q9. Explain how you chose your specific test cases and why they lead you to be confident `findNthPerfectEuclid` is working correctly.
+A9. TODO
+
+Test the output number and checked they are prime.
+
+Soundex
+-------
+
+Q10. What is the Soundex code for "Angelou"? What is the code for your own surname?
+A10. TODO
+
+A524 W520
+
+Q11. Before writing any code, brainstorm your plan of attack and sketch how you might decompose the work into smaller tasks. Briefly describe your decomposition strategy.
+A11. TODO
+
+Extract letters from the surname.
+Convert all chars into the upper chases.
+Extract the substring after the First char and encode them into numbers based on the table.
+Move duplicate numbers and zeros.
+Check the length of code padding zeros or truncating the excess.
+
+
+Q12. Think about one or more examples of a class of names that the Soundex system might not work well for. Explain what this class of names is and why the system might incorrectly group them or mis-categorize one of the names.
+A12. TODO
+
+Name from orient countries because they may have different sounds in English, which can fit will for the encoder table.
+
+Q13. Suppose you are a software engineer working for the U.S. government. You have been tasked with implementing a system that collects names as part of the Census survey and analyzes these names using a phonetic algorithm. Your boss suggests using Soundex and notes that the algorithm is only expected to work for ASCII-encoded strings, since supporting Unicode would require extra work and time. What would your response be and why? What representational harms might result from building a system that exclusively uses Soundex and/or ASCII?
+A13. TODO
+
+I will discuss with my leader the representational harm that may cause by ASCII code because ASCII code only has several symbols. It can write the people from other countries in the right way.
+
