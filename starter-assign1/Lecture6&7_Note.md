@@ -56,4 +56,29 @@ for (char ch = 'a'; ch='z';ch++){</br>
 }</br>
 
 ## Word ledders
+Formalizing BFS Breath-First Search Data Structures
+A data structure to represent(partial word) ladders => Stack<string> </br>
+A data structure to store all the partial word ladders that we have generated so far and have yet to explore => Queue<Stack<string>> </br>
+A data structure to kee track of all the words that we have explored so far so the we aviod getting stuck in loops +> Set<string> </br>
+
+Srack<string> findWordLadder(string startingWord, string destinationWord, Set<string>& dictionary){</br>
+  Queue<Stack<string>> allLadders;</br>
+  Set<string> visitedWords;</br>
+  Stack<string> initailLadder = {startingWord};</br>
+  allLadders.enqueue(initialLadder);</br>
+  while(!allLadders.isEmpty()){</br>
+    Stack<string>currentLadder =  allLadders.dequeue();</br>
+    string currentWord = currentLadder.peek();</br>
+    if (currentWord == destinationWord) return currentLadder'</br>
+  }</br>
+  Set<string> neighbors = generateBeighboringWords(currentWord, dictionary); </br>
+  for(string neighbor:neighbors){</br>
+    if(!visitedWOrds.contains(neighbor)){</br>
+      Srack<string> newLadder = currentLadder;</br>
+      newLadder.push(neighbor);</br>
+      visitedWords.add(neighbor);</br>
+      addLadders.enqueue(newLadder)</br>
+    }</br>
+  }</br>
+}</br>
 
