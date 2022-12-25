@@ -67,9 +67,9 @@ Srack<string> findWordLadder(string startingWord, string destinationWord, Set<st
   Stack<string> initailLadder = {startingWord};</br>
   allLadders.enqueue(initialLadder);</br>
   while(!allLadders.isEmpty()){</br>
-    Stack<string>currentLadder =  allLadders.dequeue();</br>
+    Stack<string> currentLadder =  allLadders.dequeue();</br>
     string currentWord = currentLadder.peek();</br>
-    if (currentWord == destinationWord) return currentLadder'</br>
+    if (currentWord == destinationWord) return currentLadder;</br>
   }</br>
   Set<string> neighbors = generateBeighboringWords(currentWord, dictionary); </br>
   for(string neighbor:neighbors){</br>
