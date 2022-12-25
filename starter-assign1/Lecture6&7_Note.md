@@ -59,7 +59,7 @@ for (char ch = 'a'; ch='z';ch++){</br>
 Formalizing BFS Breath-First Search Data Structures
 A data structure to represent(partial word) ladders => Stack<string> </br>
 A data structure to store all the partial word ladders that we have generated so far and have yet to explore => Queue<Stack<string>> </br>
-A data structure to kee track of all the words that we have explored so far so the we aviod getting stuck in loops +> Set<string> </br>
+A data structure to kee track of all the words that we have explored so far so the we aviod getting stuck in loops => Set<string> </br>
 
 Srack<string> findWordLadder(string startingWord, string destinationWord, Set<string>& dictionary){</br>
   Queue<Stack<string>> allLadders;</br>
